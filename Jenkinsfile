@@ -1,11 +1,5 @@
 pipeline {
-  agent {
-    kubernetes {
-      label 'maven-pod-template'
-      defaultContainer 'maven-container'
-      yamlFile 'KubernetesPod.yaml'
-    }
-  }
+  agent any
   stages {
     stage('Build') {
       steps {
